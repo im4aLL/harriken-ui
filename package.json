@@ -1,0 +1,39 @@
+{
+  "name": "harriken-ui",
+  "version": "1.0.0",
+  "description": "A frontend ui kit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/im4aLL/harriken-ui.git"
+  },
+  "author": "Habib Hadi <me@habibhadi.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/im4aLL/harriken-ui/issues"
+  },
+  "homepage": "https://github.com/im4aLL/harriken-ui#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "webpack": "^3.5.5",
+    "webpack-stream": "^4.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
