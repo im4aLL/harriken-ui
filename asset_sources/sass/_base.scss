@@ -1,0 +1,72 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway:400,600,800';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css';
+
+$font-weight-regular: 400;
+$font-weight-medium: 600;
+$font-weight-bold: 800;
+
+%font-regular {
+    font-family: 'Raleway', sans-serif;
+    font-weight: $font-weight-regular;
+}
+
+%font-medium {
+    font-family: 'Raleway', sans-serif;
+    font-weight: $font-weight-medium;
+}
+
+%font-bold {
+    font-family: 'Raleway', sans-serif;
+    font-weight: $font-weight-bold;
+}
+
+body {
+    @extend %font-medium;
+    color: $color-secondary-semi;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: $color-primary;
+}
+
+button {
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+::selection {
+    background: $color-secondary;
+    color: $color-base-white;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: $color-secondary;
+    color: $color-base-white;
+    text-shadow: none;
+}
+
+input, a, button, textarea {
+    outline: none;
+}
+
+.theme--dark {
+    color: $color-base-white;
+}
+
+
+ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+small {
+    font-size: 70%;
+}

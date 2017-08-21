@@ -1,0 +1,230 @@
+h1, .header__h1, h2, .header__h2, h3, .header__h3, h4, .header__h4, h5, .header__h5, h6, .header__h6 {
+    color: $color-secondary-semi;
+
+    .theme--dark &, &.theme--dark {
+        color: $color-base-white;
+    }
+}
+
+h1, .header__h1 {
+    @extend %font-bold;
+    font-size: rem-calc(36);
+    line-height: rem-calc(45);
+    letter-spacing: -0.04em;
+}
+
+h2, .header__h2 {
+    @extend %font-bold;
+    font-size: rem-calc(32);
+    line-height: rem-calc(40);
+    letter-spacing: -0.04em;
+}
+
+h3, .header__h3 {
+    @extend %font-regular;
+    font-size: rem-calc(28);
+    line-height: rem-calc(32);
+    letter-spacing: -0.04em;
+
+    span {
+        @extend %font-bold;
+    }
+
+    @include breakpoint(medium up) {
+        line-height: rem-calc(38);
+    }
+}
+
+h4, .header__h4 {
+    @extend %font-bold;
+    font-size: rem-calc(24);
+    line-height: rem-calc(34);
+    letter-spacing: -0.02em;
+}
+
+h5, .header__h5 {
+    @extend %font-bold;
+    font-size: rem-calc(20);
+    line-height: rem-calc(30);
+    letter-spacing: -0.02em;
+}
+
+h6, .header__h6 {
+    @extend %font-bold;
+    font-size: rem-calc(16);
+    line-height: rem-calc(22);
+    letter-spacing: -0.02em;
+
+    @include breakpoint(medium up) {
+        // font-weight: $font-weight-bold;
+        line-height: rem-calc(26);
+    }
+}
+
+.header__native {
+    font-size: rem-calc(16);
+    line-height: rem-calc(22);
+    @extend %font-bold;
+    position: relative;
+    margin: rem-calc(20) 0;
+
+    &:before {
+        content: "";
+        display: block;
+        width: rem-calc(35);
+        height: rem-calc(5);
+        border-radius: rem-calc(5);
+        background: $color-secondary-whiten;
+        position: absolute;
+        top: rem-calc(-10);
+        left: 0;
+    }
+}
+
+.header__native--bordered {
+    border-bottom: rem-calc(1) solid $color-whiten-bg;
+    padding-bottom: rem-calc(14);
+    @include clearfix();
+
+    .badge {
+        float: right;
+    }
+}
+
+.text__dimmed {
+    color: $color-secondary-light;
+}
+
+.text__tertiary {
+    @extend %font-regular;
+    font-size: rem-calc(14);
+    line-height: rem-calc(22);
+
+    @include breakpoint(medium up) {
+        line-height: rem-calc(26);
+    }
+}
+
+.text__primary {
+    @extend %font-medium;
+    font-size: rem-calc(16);
+    line-height: rem-calc(28);
+}
+
+.text__secondary {
+    @extend %font-medium;
+    font-size: rem-calc(14);
+    line-height: rem-calc(26);
+}
+
+.text__small {
+    @extend %font-medium;
+    font-size: rem-calc(12);
+    line-height: rem-calc(18);
+}
+
+.text__success {
+    color: $color-success !important;
+}
+
+.text__bold {
+    @extend %font-bold;
+}
+
+.list__primary {
+
+}
+
+.list__primary__item {
+    position: relative;
+    padding: 0 0 rem-calc(11) rem-calc(32);
+    font-size: rem-calc(14);
+    line-height: rem-calc(22);
+
+    &:before {
+        color: $color-success;
+        content: "\f3ff"; // f3ff | f3fe
+        display: inline-block;
+        font-family: "Ionicons";
+        font-size: rem-calc(22);
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        text-rendering: auto;
+        font-smoothing: antialiased;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &.is__opposite {
+        color: $color-secondary-light;
+
+        &:before {
+            color: $color-secondary-light;
+            content: "\f405";
+        }
+    }
+}
+
+
+.link__primary {
+    color: $color-primary-light;
+
+    &:hover {
+        border-bottom: rem-calc(1) solid $color-primary-light;
+    }
+}
+
+.link__secondary {
+    @extend %font-medium;
+    color: $color-primary;
+    border-bottom: rem-calc(1) solid rgba($color-primary, 0.5);
+    display: inline-block;
+    @include transition('border');
+
+    &:hover {
+        border-bottom-color: transparent;
+    }
+}
+
+.list__secondary {
+
+}
+
+.list__secondary__item {
+    position: relative;
+    padding: 0 0 rem-calc(20) rem-calc(70);
+
+    &:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+
+.list__secondary__item__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.list__secondary__item__text {
+    @extend .text__small;
+    color: $color-secondary-demi;
+    font-weight: 400;
+    padding: rem-calc(5) 0 0;
+}
+
+.list__secondary__item--no--image {
+    padding-left: 0;
+}
+
+.list__secondary__item--centered {
+    height: rem-calc(50);
+    display: flex;
+    align-items: center;
+    padding-bottom: 0;
+    margin-bottom: rem-calc(10);
+}

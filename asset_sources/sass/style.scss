@@ -1,5 +1,34 @@
-$color: #fafafa;
+$breakpoints: (
+    small: 0,
+    medium: 640px,
+    large: 1240px,
+    xlarge: 1300px,
+    xxlarge: 1440px,
+);
 
-body {
-    background: $color;
-}
+$global-width: 1240px;
+
+@import '../../node_modules/foundation-sites/_vendor/normalize-scss/sass/normalize';
+@import "../../node_modules/foundation-sites/scss/util/util";
+@import "../../node_modules/foundation-sites/scss/global";
+
+$grid-column-gutter: (
+    small: 40px,
+    medium: 20px,
+    large: 20px
+);
+
+@import "../../node_modules/foundation-sites/scss/grid/grid";
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+
+@import "settings";
+@import "mixin";
+
+@import "reset";
+@import "base";
+@import "typography";
+@import "modules/nav";
+@import "modules/button";

@@ -1,0 +1,86 @@
+.nav, .nav__list {
+    float: left;
+    @include clearfix();
+}
+
+.nav__list {
+    // padding-top: rem-calc(14);
+}
+
+.nav__list__item {
+    float: left;
+    padding-right: rem-calc(18);
+
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+.nav__list__item__link {
+    font-size: rem-calc(14);
+    border-bottom: rem-calc(1) solid transparent;
+    display: inline-block;
+    padding-bottom: rem-calc(5);
+    @include transition('color, border');
+
+    &:hover {
+        color: $color-primary-light;
+    }
+
+    &:active, &:focus,
+    .nav__list__item--active & {
+        color: $color-primary-light;
+        border-color: $color-primary-light;
+        cursor: default;
+    }
+
+    .theme--dark & {
+        color: $color-base-white;
+    }
+}
+
+.nav__list--has-button {
+    .nav__list__item__link {
+        margin: rem-calc(11) 0 0;
+    }
+}
+
+
+/**
+ * Vertical nav
+ */
+
+.nav__vertical {
+
+}
+
+.nav__vertical__hl {
+    padding-bottom: rem-calc(18);
+    font-weight: $font-weight-bold;
+}
+
+.nav__vertical__list {
+
+}
+
+.nav__vertical__list__item {
+    padding-bottom: rem-calc(10);
+}
+
+.nav__vertical__list__item__link {
+    font-size: rem-calc(14);
+    @extend %font-regular;
+    border-bottom: rem-calc(1) solid transparent;
+    display: inline-block;
+    line-height: rem-calc(22);
+    @include transition('color, border');
+
+    .theme--dark & {
+        color: $color-secondary-whiten;
+
+        &:hover {
+            color: $color-primary-light;
+            border-bottom: rem-calc(1) solid $color-primary-light;
+        }
+    }
+}
