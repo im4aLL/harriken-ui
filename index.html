@@ -12,12 +12,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeDefault.min.css">
     <style>
         html, body { height: 100%; width: 100%; }
-        body { padding-top: 78px; }
-        .doc__header { padding: 20px 10px; border-bottom: 1px solid #f1f1f1; position: fixed; left: 0; top: 0; width: 100%; background: #fff; z-index: 500; }
+        body { padding-top: 55px; }
+        .doc__header { padding: 10px 10px 7px; border-bottom: 1px solid #f1f1f1; position: fixed; left: 0; top: 0; width: 100%; background: #f9f9f9; z-index: 500; }
+        .theme--dark.doc__header { background: #46535e; border-bottom: none; }
         .doc__header .nav { float: right; }
         .doc__nav { position: fixed; width: 230px; height: calc(100% - 78px); border-right: 1px solid #f1f1f1; overflow: auto; padding: 15px; }
         .doc__nav li { }
-        .doc__nav li a { display: block; font-size: 14px; line-height: 18px; padding: 5px 0; }
+        .doc__nav li a { display: block; font-size: 14px; line-height: 18px; padding: 5px 0; color: #5e676e; }
         .doc__nav li a:hover { opacity: 0.7; }
         .doc__body { padding: 40px 40px 40px 270px; }
         .doc__body__header { padding-bottom: 10px; color: #f05a36; border-bottom: 1px solid #f05a36; margin-bottom: 15px; }
@@ -30,17 +31,18 @@
 </head>
 <body>
 
-    <div class="doc__header">
+    <div class="doc__header theme--dark">
         <div class="row expanded">
             <div class="columns large-4">
-                <a href="./"><h5>Harriken UI Kit</h5></a>
+                <a href="./"><h5>Harriken UI Kit <small class="text__dimmed">v1.0</small></h5></a>
             </div>
             <div class="columns large-8">
                 <nav class="nav">
                     <ul class="nav__list nav__list--has-button">
-                        <li class="nav__list__item"><a href="#" class="nav__list__item__link">Documentation</a></li>
+                        <li class="nav__list__item"><a href="#" class="nav__list__item__link">Installation</a></li>
+                        <li class="nav__list__item"><a href="#" class="nav__list__item__link">Usage</a></li>
                         <li class="nav__list__item"><a href="https://github.com/im4aLL/harriken-ui" class="nav__list__item__link">Github</a></li>
-                        <li class="nav__list__item"><a href="#" class="button button--primary button--small">Download zip</a></li>
+                        <li class="nav__list__item"><a href="#" class="button button--primary button--small theme--dark">Download zip</a></li>
                     </ul>
                 </nav>
             </div>
