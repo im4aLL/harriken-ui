@@ -127,8 +127,48 @@ h6, .header__h6 {
     color: $color-success !important;
 }
 
-.text__bold {
+em, .text__italic {
+    font-style: italic;
+}
+
+strong, .text__bold {
     @extend %font-bold;
+}
+
+mark, .text__mark {
+    font-family: Consolas;
+    font-size: inherit;
+    background: $color-secondary-whiten;
+    border-radius: 2px;
+    color: $color-secondary;
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.blockquote {
+    background: $color-whiten-bg-light;
+    border-left: rem-calc(5) solid $color-secondary-whiten;
+    padding: rem-calc(20);
+}
+
+.blockquote__footer {
+    opacity: 0.6;
+
+    cite {
+        font-style: italic;
+    }
+}
+
+.text__left {
+    text-align: left;
+}
+
+.text__center {
+    text-align: center;
+}
+
+.text__right {
+    text-align: right;
 }
 
 .list__primary {
@@ -169,27 +209,6 @@ h6, .header__h6 {
     }
 }
 
-
-.link__primary {
-    color: $color-primary-light;
-
-    &:hover {
-        border-bottom: rem-calc(1) solid $color-primary-light;
-    }
-}
-
-.link__secondary {
-    @extend %font-medium;
-    color: $color-primary;
-    border-bottom: rem-calc(1) solid rgba($color-primary, 0.5);
-    display: inline-block;
-    @include transition('border');
-
-    &:hover {
-        border-bottom-color: transparent;
-    }
-}
-
 .list__secondary {
 
 }
@@ -227,4 +246,43 @@ h6, .header__h6 {
     align-items: center;
     padding-bottom: 0;
     margin-bottom: rem-calc(10);
+}
+
+.list__plain {
+    margin-left: rem-calc(17);
+
+    li {
+        list-style: disc;
+        padding: rem-calc(5) 0;
+    }
+
+    ul {
+        margin-left: rem-calc(27);
+        padding-top: rem-calc(5);
+
+        li {
+            list-style: circle;
+        }
+    }
+}
+
+
+.link__primary {
+    color: $color-primary-light;
+
+    &:hover {
+        border-bottom: rem-calc(1) solid $color-primary-light;
+    }
+}
+
+.link__secondary {
+    @extend %font-medium;
+    color: $color-primary;
+    border-bottom: rem-calc(1) solid rgba($color-primary, 0.5);
+    display: inline-block;
+    @include transition('border');
+
+    &:hover {
+        border-bottom-color: transparent;
+    }
 }

@@ -8,7 +8,24 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeDefault.min.css">
     <style>
+        html, body { height: 100%; width: 100%; }
+        body { padding-top: 78px; }
+        .doc__header { padding: 20px 10px; border-bottom: 1px solid #f1f1f1; position: fixed; left: 0; top: 0; width: 100%; background: #fff; z-index: 500; }
+        .doc__header .nav { float: right; }
+        .doc__nav { position: fixed; width: 230px; height: calc(100% - 78px); border-right: 1px solid #f1f1f1; overflow: auto; padding: 15px; }
+        .doc__nav li { }
+        .doc__nav li a { display: block; font-size: 14px; line-height: 18px; padding: 5px 0; }
+        .doc__nav li a:hover { opacity: 0.7; }
+        .doc__body { padding: 40px 40px 40px 270px; }
+        .doc__body__header { padding-bottom: 10px; color: #f05a36; border-bottom: 1px solid #f05a36; margin-bottom: 15px; }
+        .doc__body__text { font-size: 14px; line-height: 22px; }
+        .doc__body__view { margin: 0 0 40px 0 }
+        .doc__section { margin-bottom: 40px; }
+        .doc__body__text > h6 { padding: 40px 0 8px; color: #babec6; border-bottom: 1px solid #babec6; margin-bottom: 15px; }
+        .syntaxhighlighter { margin: 25px 0 !important; }
     </style>
 </head>
 <body>
@@ -21,14 +38,214 @@
             <div class="columns large-8">
                 <nav class="nav">
                     <ul class="nav__list nav__list--has-button">
-                        <li class="nav__list__item"><a href="#" class="nav__list__item__link">Create an account</a></li>
-                        <li class="nav__list__item"><a href="#" class="button button--primary button--small">Sign in</a></li>
+                        <li class="nav__list__item"><a href="#" class="nav__list__item__link">Documentation</a></li>
+                        <li class="nav__list__item"><a href="https://github.com/im4aLL/harriken-ui" class="nav__list__item__link">Github</a></li>
+                        <li class="nav__list__item"><a href="#" class="button button--primary button--small">Download zip</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </div>
 
+    <div class="doc__nav">
+        <ul>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#button">Button</a></li>
+        </ul>
+    </div>
+
+    <div class="doc__body">
+
+        <!-- typography -->
+        <div id="typography" class="doc__section">
+            <h5 class="doc__body__header">Typography</h5>
+            <div class="doc__body__text">
+                Documentation and examples for typography, including global settings, headings, body text, lists, and more.
+
+                <h6>Headings</h6>
+                <div class="doc__body__view">
+                    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h1>
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
+                    <h3>Lorem ipsum dolor sit amet, <span>consectetur adipisicing</span> elit</h3>
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h5>
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h6>
+                </div>
+                <pre class="brush: xml">
+                    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h1>
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
+                    <h3>Lorem ipsum dolor sit amet, <span>consectetur adipisicing</span> elit</h3>
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h5>
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h6>
+                </pre>
+
+                <h6>Headings with class</h6>
+                <pre class="brush: xml">
+                    <p class="header__h1">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    <p class="header__h2">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    <p class="header__h3">Lorem ipsum dolor sit amet, <span>consectetur adipisicing</span> elit</p>
+                    <p class="header__h4">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    <p class="header__h5">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    <p class="header__h6">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </pre>
+
+                <h6>Native header</h6>
+                <h4 class="header__native">Native header style</h4>
+                <h4 class="header__native header__native--bordered">Native header style with border <a class="badge badge--tertiary--extended" href="">view all</a></h4>
+
+                <pre class="brush: xml">
+                    <h4 class="header__native">Native header style</h4>
+                    <h4 class="header__native header__native--bordered">
+                        Native header style with border
+                        <a class="badge badge--tertiary--extended" href="">view all</a>
+                    </h4>
+                </pre>
+
+                <h6>Inline text elements</h6>
+                <div class="doc__body__view">
+                    <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+                    <p><del>This line of text is meant to be treated as deleted text.</del></p>
+                    <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+                    <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+                    <p><u>This line of text will render as underlined</u></p>
+                    <p><small>This line of text is meant to be treated as fine print.</small></p>
+                    <p><strong>This line rendered as bold text.</strong></p>
+                    <p><em>This line rendered as italicized text.</em></p>
+                </div>
+
+                <pre class="brush: xml">
+                    <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+                    <p><del>This line of text is meant to be treated as deleted text.</del></p>
+                    <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+                    <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+                    <p><u>This line of text will render as underlined</u></p>
+                    <p><small>This line of text is meant to be treated as fine print.</small></p>
+                    <p><strong>This line rendered as bold text.</strong></p>
+                    <p><em>This line rendered as italicized text.</em></p>
+                </pre>
+
+                <h6>Blockquotes</h6>
+                <blockquote class="blockquote">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <footer class="blockquote__footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                </blockquote>
+
+                <pre class="brush: xml">
+                    <blockquote class="blockquote">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer class="blockquote__footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                    </blockquote>
+                </pre>
+
+                <h6>Alignment</h6>
+                <p class="text__left">Text left</p>
+                <p class="text__center">Text center</p>
+                <p class="text__right">Text right</p>
+
+                <pre class="brush: xml">
+                    <p class="text__left">Text left</p>
+                    <p class="text__center">Text center</p>
+                    <p class="text__right">Text right</p>
+                </pre>
+
+                <h6>Plain list</h6>
+                <ul class="list__plain">
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Consectetur adipiscing elit</li>
+                    <li>Integer molestie lorem at massa</li>
+                    <li>Nulla volutpat aliquam velit
+                        <ul>
+                            <li>Phasellus iaculis neque</li>
+                            <li>Purus sodales ultricies</li>
+                            <li>Vestibulum laoreet porttitor sem</li>
+                            <li>Ac tristique libero volutpat at</li>
+                        </ul>
+                    </li>
+                    <li>Facilisis in pretium nisl aliquet</li>
+                </ul>
+
+                <pre class="brush: xml">
+                    <ul class="list__plain">
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Consectetur adipiscing elit</li>
+                        <li>Integer molestie lorem at massa</li>
+                        <li>Nulla volutpat aliquam velit
+                            <ul>
+                                <li>Phasellus iaculis neque</li>
+                                <li>Purus sodales ultricies</li>
+                                <li>Vestibulum laoreet porttitor sem</li>
+                                <li>Ac tristique libero volutpat at</li>
+                            </ul>
+                        </li>
+                        <li>Facilisis in pretium nisl aliquet</li>
+                    </ul>
+                </pre>
+
+                <h6>Primary list</h6>
+                <ul class="list__primary">
+                    <li class="list__primary__item">Lorem ipsum dolor sit amet</li>
+                    <li class="list__primary__item">Consectetur adipiscing elit</li>
+                    <li class="list__primary__item">Integer molestie lorem at massa</li>
+                    <li class="list__primary__item">Facilisis in pretium nisl aliquet</li>
+                </ul>
+
+                <pre class="brush: xml">
+                    <ul class="list__primary">
+                        <li class="list__primary__item">Lorem ipsum dolor sit amet</li>
+                    </ul>
+                </pre>
+
+                <h6>Secondary list</h6>
+                <ul class="list__secondary">
+                    <li class="list__secondary__item list__secondary__item--centered">
+                        <img src="http://via.placeholder.com/50x50" alt="" class="list__secondary__item__img">
+                        <h6 class="list__secondary__item__title">10% cash back offer</h6>
+                    </li>
+                    <li class="list__secondary__item list__secondary__item--centered">
+                        <img src="http://via.placeholder.com/50x50" alt="" class="list__secondary__item__img">
+                        <h6 class="list__secondary__item__title">Get 20% discount</h6>
+                    </li>
+                    <li class="list__secondary__item">
+                        <img src="http://via.placeholder.com/50x50" alt="" class="list__secondary__item__img">
+                        <h6 class="list__secondary__item__title">Enjoy 15% discount for Gold user</h6>
+                        <p class="list__secondary__item__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                    </li>
+                </ul>
+
+                <pre class="brush: xml">
+                    <ul class="list__secondary">
+                        <li class="list__secondary__item list__secondary__item--centered">
+                            <img src="http://via.placeholder.com/50x50" alt="" class="list__secondary__item__img">
+                            <h6 class="list__secondary__item__title">10% cash back offer</h6>
+                        </li>
+                        <li class="list__secondary__item list__secondary__item--centered">
+                            <img src="http://via.placeholder.com/50x50" alt="" class="list__secondary__item__img">
+                            <h6 class="list__secondary__item__title">Get 20% discount</h6>
+                        </li>
+                        <li class="list__secondary__item">
+                            <img src="http://via.placeholder.com/50x50" alt="" class="list__secondary__item__img">
+                            <h6 class="list__secondary__item__title">Enjoy 15% discount for Gold user</h6>
+                            <p class="list__secondary__item__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                        </li>
+                    </ul>
+                </pre>
+
+            </div>
+        </div>
+        <!-- typography -->
+
+        <!-- button -->
+
+        <!-- button -->
+
+    </div><!-- doc__body -->
+
     <script src="assets/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script>
+    <script type="text/javascript">
+        SyntaxHighlighter.all()
+    </script>
 </body>
 </html>
